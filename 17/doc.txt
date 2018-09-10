@@ -1,0 +1,7 @@
+(stake)  zero|minimal|normal|big, commited|not-commited
+
+;after flop:
+(table-rank) no-pair|one-pair|trips
+
+(table-color) no-color,{1,2}|rainbow,1|color,{3,4,5}
+

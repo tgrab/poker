@@ -1,0 +1,21 @@
+\.orig$
+\.orig\..*$
+\.chg\..*$
+\.rej$
+\.conflict\~$
+syntax: glob
+*.class
+*.jar
+*.zip
+*.abcl
+*.x86f
+*.exe
+build/*
+dist/*
+nbproject/private/*
+*.fas
+*.lib
+Screen.log
+logs/*
+
+

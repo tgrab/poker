@@ -1,0 +1,4 @@
+unstable: zmiana systemu logicznego, tablice haszujace to rozne poziomy
+pamieci, www->lisp->prolog->lisp->www, stan aplikacji przechowywany jako
+predykaty w roznych pamieciach, jedna struktura game!
+thx16

@@ -1,0 +1,5 @@
+; Default:
+;mode=pl1
+;localLisp=true
+
+localLisp=false

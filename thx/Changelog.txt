@@ -1,0 +1,10 @@
+thx22(testing): abcl , usuwamy http
+thx21(testing): usuwamy dao,view itd. lisp ma miec tylko warstwe logiki i prosty
+	 	    interfejs http.
+thx20(testing): zmiana klas, logika boole'a zamiast predykatow,history=history-log
+thx19(testing): pakiety, gameslist w bazie danych
+thx18(stable): przechodzimy na clispa
+thx17(stable): zmiana systemu logicznego, tablice haszujace to rozne poziomy
+pamieci, www->lisp->prolog->lisp->www, stan aplikacji przechowywany jako
+predykaty w roznych pamieciach, jedna struktura game!
+thx16(stable):

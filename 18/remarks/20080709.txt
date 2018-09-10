@@ -1,0 +1,17 @@
+*Table Matkowski*
+
+(+?)    6078191013
+(-)x7   6078190493 dokupowanie bez odsow
+(-?)x14 6078191353 najnizszy set i dokupowanie a stol complex
+(-)     @@ preflop call raise bad hand
+(-)x7   6078192993 slowplay str8 nutsa, a pozniej spada kolor i sprawdzam go
+(-)x35  6078193243 dokupowanie strong implied, nie doszlo
+(-)x15  6078193383 preflop first bet z asami i kontynuacja na flop allin
+
+*Table Voracova*
+
+(-)x3     6078536273 dokupowanie bez oddsow, p. juz mial strita
+(-OK)x5   6078536413 mialem st8 nutsa na flopie spadl kolor spasowalem
+(+?)x12   pf reraise z asami, na flopie set i all-in
+(-)x4     pf call z JJ
+(-OK)x50   BB

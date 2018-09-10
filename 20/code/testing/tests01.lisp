@@ -1,0 +1,31 @@
+(in-package :poker)
+
+(defvar *player-names*  (list "p1" "p2" "p3" "p4" "p5" "p6" "p7" "p8" "p9" "Grabol"))
+
+;zbior: ((holecards 1 2 3 4) (0 sb 1) (1 bb 2) (2 f) (3 c 2) (flop 10 23 34)  )
+;       ((players ("p1" 10.5) ("p2" 23.7 (cards 10 13 15 34))  )     )
+
+
+(defun simulate(test)
+  (setq *game* (new-game))
+  (dolist (p test)
+    (if (symbolp (first p))
+	(case (first p)
+	  (show (format t "~A~&" *game*))
+	  (flop  (round-flop (nth 1 p) (nth 2 p) (nth 3 p) ))
+	  (turn  (round-turn (nth 1 p)  ))
+	  (river (round-river (nth 1 p) ))
+	  (holecards (holecards *game* (nth 1 p) (nth 2 p) (nth 3 p) (nth 4 p) ))   )
+	(case (second p)
+	  (sb (small-blind (nth (first p) *player-names*) (third p)))
+	  (bb (big-blind (nth (first p) *player-names*) (third p)))
+	  (c (call (nth (first p) *player-names*) (third p)))
+	  (b (bet (nth (first p) *player-names*) (third p)))
+	  (r (raise (nth (first p) *player-names*) (third p)))
+	  (f (fold (nth (first p) *player-names*)))    )      )))
+
+(defun simulate-file(fname)
+  (with-open-file (f fname)
+    (do ((expr (read f nil 'end) (read f nil 'end)))
+	((eq 'end expr))
+      (simulate expr))))

@@ -1,0 +1,27 @@
+(load "sysdefs.lisp")
+(asdf:oos 'asdf:load-op :cl-moje)
+(asdf:oos 'asdf:load-op :cl-http)
+(asdf:oos 'asdf:load-op :cl-who)
+(asdf:oos 'asdf:load-op :plain-odbc)
+
+(load "packages.lisp")
+(load (compile-file "poker_ranks.lisp" :output-file "../poker_ranks"))
+(load (compile-file "dao.lisp" :output-file "../dao"))
+(load (compile-file "poker.lisp" :output-file "../poker"))
+(load (compile-file "poker_utilities.lisp" :output-file "../poker_utilities"))
+(load (compile-file "poker_engine.lisp" :output-file "../poker_engine"))
+(load "rules.lisp")
+(load (compile-file "poker_percepts.lisp" :output-file "../poker_percepts"))
+(load (compile-file "poker_action.lisp" :output-file "../poker_action"))
+(load (compile-file "poker_logs.lisp" :output-file "../poker_logs"))
+
+
+(asdf:oos 'asdf:load-op :s-xml)
+(load (compile-file "prima.lisp" :output-file "../prima"))
+;(load (compile-file "web/minimal.lisp" :output-file "../minimal"))
+#+clisp(load (compile-file "web/view.lisp" :output-file "../view"))
+#+cmu(load (compile-file "web/view.lisp" :output-file "../../view"))
+#+clisp(load (compile-file "web/viewprima.lisp" :output-file "../viewprima"))
+#+cmu(load (compile-file "web/viewprima.lisp" :output-file "../../viewprima"))
+;(load (compile-file "web/view02.lisp" :output-file "../view02"))
+

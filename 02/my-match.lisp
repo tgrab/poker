@@ -1,0 +1,40 @@
+(defun scar(string &optional (delimiter #\Space))
+  (let* ((new-string (string-trim (vector delimiter) string))
+	(p1 (position delimiter new-string)))
+    (subseq new-string 0 p1)))
+
+(defun scdr(string &optional (delimiter #\Space))
+  (let* ((new-string (string-trim (vector delimiter) string))
+	(p1 (position delimiter new-string)))
+   (when p1  (string-left-trim (vector delimiter)
+			       (subseq new-string (1+ p1))))))
+
+(defun variable-p(var)
+  (and (symbolp var)
+       (equal (char (symbol-name var) 0) #\?)))
+
+(defun match-variable(var input bindings)
+  (let ((b (assoc var bindings)))
+    (cond
+      ((not b) (cons (cons var input) bindings))
+      ((string= input (cdr b)) bindings)
+      (t nil))))
+
+;(pat-match '("la" ?x "la") (tokens "la la la"))
+(defun pat-match(pattern input &optional (bindings '((t . t))) )
+  (cond
+    ((null bindings) nil)
+    ((variable-p  pattern)
+     (match-variable  pattern input bindings) )
+    ((and (stringp pattern) (string= pattern input)) bindings)
+    ((and (symbolp pattern) (search (symbol-name pattern) (string-upcase input)))
+     bindings  )
+    ((and (consp pattern) (consp input))
+     (pat-match (cdr pattern) (cdr input)
+		(pat-match (car pattern) (car input) bindings)))  
+    (t nil)    ))
+
+(defun match-it(pattern input)
+  (if (stringp input)
+      (pat-match pattern (tokens input))
+      (pat-match pattern input)))

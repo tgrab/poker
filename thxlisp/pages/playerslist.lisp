@@ -1,0 +1,10 @@
+(define-easy-handler (playerslist :uri "/primalogs/playerslist") ()
+  (page "Playerslist"
+    (let ((plrs nil))
+	(dolist (g *log-games1*)
+	 (dolist (a (log-history g))
+	    (if (> (length a) 1)
+	     (pushnew (second a) plrs :test #'equal))))
+    (dolist (p (sort  plrs #'string<))
+      (a (:href (fmt "/primalogs/player?name=~A" p)) p)
+      (br))    )))

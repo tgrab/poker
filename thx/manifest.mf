@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.7.1
+Created-By: 14.0-b16 (Sun Microsystems Inc.)
+Main-Class: forms.Main
+Class-Path: lib/abcl.jar lib/cmu_time_awb.jar lib/cmu_us_kal.jar lib/c
+ mudict04.jar lib/cmulex.jar lib/cmutimelex.jar lib/en_us.jar lib/free
+ tts-jsapi10.jar lib/freetts.jar lib/jsapi.jar lib/mbrola.jar
+X-COMMENT: Main-Class will be added automatically by build
+

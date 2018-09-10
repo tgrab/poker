@@ -1,0 +1,7 @@
+PRE-CONDS:
+1. przygotowac baze danych: baza.sql
+2. zdefiniowac zrodlo ODBC do tej bazy jako: poker
+
+
+Kod z tego katalogu jest uzywany do dokladania gier do bazy danych.
+Nie stanowi glownej czesci systemu.

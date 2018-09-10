@@ -1,0 +1,3 @@
+INSERT INTO players VALUES(DEFAULT,'grabola');
+INSERT INTO players VALUES(DEFAULT,'walek');
+INSERT INTO players VALUES(DEFAULT,'pivort');

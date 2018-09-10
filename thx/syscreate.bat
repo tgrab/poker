@@ -1,0 +1,1 @@
+clisp -i sys.lisp -x "(sys-create)"
